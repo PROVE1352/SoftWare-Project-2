@@ -11,16 +11,11 @@ void setup()
     delay(1000);
 }
 void loop(){
-    while(1) {
+    while(count != 10) {
         Serial.println(++count);
         toggle = !toggle;
         digitalWrite(PIN_LED, toggle);
         delay(200);
-        if(count == 10)
-        {
-            break;
-        }
     }
     digitalWrite(PIN_LED, 1);
-    exit(0);
 }
